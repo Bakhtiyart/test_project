@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>landing</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="title">Добро пожаловать в наш интернет магазан</h1>
+                <h2 class="title">наш магазин скоро откроется </h2>
+                <h2 class="title">Оставляйте ваш email в форме ниже</h2>
+                <form action="" method="post">{% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+</html>
